@@ -1,6 +1,4 @@
-# miND-spikein-report
-
-Small script to read in data- and metadata files from the IMI TBL miND project and calculate concentrations.
+# miND-spikein-concentrations-report
 
 See file "miND-spikein.R" for more details on how to run this and what to expect as output.
 

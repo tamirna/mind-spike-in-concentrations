@@ -266,7 +266,7 @@ for (i in 1:length(input_data_folders)) {
 
     p1 <- ggplot(sample_spikeins, aes(rc, concentration)) +
       geom_point() +
-      geom_line(aes(x = rc, y = fit), color = "blue", linetype = "dashed", size = 0.2) +
+      geom_line(aes(x = rc, y = fit), color = "blue", linetype = "dashed", linewidth = 0.2) +
       scale_x_log10(breaks = c(1e-2, 1e-1, 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7)) +
       scale_y_log10(breaks = c(1e-2, 1e-1, 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7)) +
       annotation_logticks(size = 0.1) +
@@ -307,7 +307,7 @@ for (i in 1:length(input_data_folders)) {
 
     # arrange and save both plots
     g <- arrangeGrob(p1, p2, layout_matrix = rbind(c(1, 1, 2)), nrow = 1)
-    ggsave(file = paste0(output_path, "/", input_dir, "_spikein_qc.pdf"), g, scale = 1.5)
+    ggsave(file = paste0(output_path, "/", input_dir, "_spikein_qc.pdf"), g, scale = 1.5, width = 8, height = 6)
   }
 }
 
